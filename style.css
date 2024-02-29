@@ -1,0 +1,70 @@
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+    padding: 0;
+}
+ol,
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Header */
+.header {
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+.logo-icon {
+    width: 2rem;
+    height: auto;
+}
+
+.menu-navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu-list {
+    display: flex;
+    gap: 1.2rem;
+}
+
+
+/* Content */
+
+
+@media (max-width: 768px) {
+    .menu-list-item:not(:last-of-type){
+        display: none;
+        margin: 0;
+        padding: 0;
+    }
+}
