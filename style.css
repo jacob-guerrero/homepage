@@ -79,7 +79,10 @@ a{
 
 
 /* Content */
-
+.main-content {
+    display: flex;
+    flex-direction: column;
+}
 .image-container {
     position: relative;
 }
@@ -103,6 +106,28 @@ a{
 /* About */
 #about {
     margin-top: 1.2rem;
+}
+.about-title { 
+    font-size: clamp(2rem, 4vw, 4rem);
+    text-align: center;
+    padding-bottom: 0.5rem;
+}
+p.about-text:last-of-type {
+    padding-bottom: 0.8rem;
+}
+.network-list {
+    display: flex;
+    gap: 0.6rem;
+    justify-content: center;
+}
+.icon {
+    width: 2rem;
+    height: auto;
+}
+
+/* Work */
+#work {
+    margin-top: 4rem;
 }
 .about-title { 
     font-size: clamp(2rem, 4vw, 4rem);
