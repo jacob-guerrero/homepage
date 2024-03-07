@@ -74,13 +74,6 @@ a {
     font-weight: 700;
 }
 
-@media (max-width: 480px) {
-    .header{
-        padding: 1rem;
-    }
-}
-
-
 /* Content */
 .main-content {
     display: flex;
@@ -89,6 +82,7 @@ a {
 }
 .image-container {
     position: relative;
+    max-width: 500px;
 }
 .main-title {
     font-size: clamp(2rem, 4vw, 4rem);
@@ -114,7 +108,12 @@ a {
     padding-bottom: 1rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1rem;
+}
+
+.about-container {
+    max-width: 500px;
 }
 .about-title, .work-title{ 
     font-size: clamp(2rem, 4vw, 4rem);
@@ -143,6 +142,8 @@ p.about-text:last-of-type {
 .project-container {
     width: 100%;
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min-content, 250px));
+    justify-content: center;
     gap: 4rem;
 }
 .project-item {
@@ -183,17 +184,25 @@ p.about-text:last-of-type {
     padding-top: 1.6rem;
     display: grid;
     gap: 1rem;
+    justify-content: center;
 
     background-color: var(--background-main);
     color:white;
 }
 
+.contact-info {
+    display: grid;
+    gap: 1rem;
+    max-width: 500px;
+}
 .contact-title {
     font-size: clamp(2rem, 4vw, 4rem);
     text-align: center;
 }
 .email-container {
     display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 .foot-network-list {
     display: flex;
@@ -203,6 +212,7 @@ p.about-text:last-of-type {
 .profile-test {
     width: 100%;
     margin-top: 1rem;
+    max-width: 500px;
 }
 
 #contact > *:not(:last-child) {
@@ -222,17 +232,22 @@ p.about-text:last-of-type {
     border-bottom: none;
 }
 #about {
-    background-image: linear-gradient(164deg, var(--background-main) 0%,var(--background-main) 30%, #ffffff 40%, #fff 80%);
+    background-image: linear-gradient(164deg, var(--background-main) 0%,var(--background-main) 30%, #ffffff 35%, #fff 80%);
 }
 
 /* Queries */
-@media (max-width: 768px) {
-    .menu-list-item:not(:last-of-type){
+@media (max-width: 480px) {
+    .header{
+        padding: 1rem;
+    }
+    .email-icon {
         display: none;
         margin: 0;
         padding: 0;
     }
-    .email-icon {
+}
+@media (max-width: 768px) {
+    .menu-list-item:not(:last-of-type){
         display: none;
         margin: 0;
         padding: 0;
