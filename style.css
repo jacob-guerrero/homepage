@@ -181,6 +181,7 @@ p.about-text:last-of-type {
 }
 .project-text {
     grid-column: 1/3;
+    overflow-y: auto;
 }
 
 /* Contact */
