@@ -85,7 +85,8 @@ a {
 }
 .image-container {
     position: relative;
-    max-width: 500px;
+    max-width: 380px;
+    height: auto;
 }
 .main-title {
     font-size: clamp(2rem, 4vw, 4rem);
@@ -239,6 +240,7 @@ p.about-text:last-of-type {
 }
 
 /* Queries */
+/* Cellphones */
 @media (max-width: 480px) {
     .header{
         padding: 1rem;
@@ -249,27 +251,7 @@ p.about-text:last-of-type {
         padding: 0;
     }
 }
-@media (max-width: 768px) {
-    .menu-list-item:not(:last-of-type){
-        display: none;
-        margin: 0;
-        padding: 0;
-    }
-}
-
-@media (min-width: 780px) {
-    #contact {
-        padding: 2.5rem 2rem;
-        grid-template-columns: minmax(min-content, 600px) 200px;
-        grid-template-rows: 200px;
-    }
-    .profile-test {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        object-fit: cover;
-    }
-}
+/* Tablets */
 @media (min-width: 481px) and (max-width: 768px) {
 
     #about {
@@ -296,6 +278,53 @@ p.about-text:last-of-type {
         border-radius: 2px;
         padding: 1rem;
         margin: 0 auto;
+    }
+}
+@media (max-width: 768px) {
+    .menu-list-item:not(:last-of-type){
+        display: none;
+        margin: 0;
+        padding: 0;
+    }
+}
+/* Large devices */
+@media (min-width: 768px) {
+    #about {
+        flex-direction: row;
+        gap: 0;
+        justify-content: center;
+        height: 78vh;
+        background-image: linear-gradient(168deg, var(--background-main) 0%, var(--background-main) 30%, #ffffff 65%, #fff 60%);
+    }
+    .about-container {
+        padding: 1rem 1.2rem;
+        box-shadow: 4px 4px 8px var(--shadows);
+        background-color: white;
+        border-radius: 2px;
+    }
+    .about-title {
+        text-align: start;
+    }
+    .network-list {
+        justify-content: end;
+    }
+
+    #contact {
+        padding: 2.5rem 2rem;
+        grid-template-columns: minmax(min-content, 600px) 200px;
+        grid-template-rows: 200px;
+    }
+    .contact-title {
+        text-align: start;
+    }
+    .profile-test {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        object-fit: cover;
+    }
+    .foot-network-list {
+        justify-content: start;
     }
 }
 
